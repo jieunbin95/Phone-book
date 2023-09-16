@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap');
 
 body{
-  
   background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,4 +83,93 @@ body{
 
 .item-box .box-num{
   margin-top: 20px;
+}
+
+@media (max-width:63rem){
+  body{
+    background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg');
+    background-repeat: repeat;
+  }
+
+  .title{
+    max-width: 90%;
+    border-bottom: 2px solid black;
+  }
+
+  .title h1{
+    font-size: 40px;
+  }
+
+  .enter-box .mb-4{
+    margin-top: 10px;
+  }
+
+  .enter-box .box_title{
+    font-size: 20px;
+  }
+
+  .enter-box .box_input{
+    font-size: 10px;
+    box-sizing: border-box;
+    max-width: 90%;
+  }
+
+  .enter-box .box_btn{
+    width:100px;
+    height:30px;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  .phone-list{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-left: none;
+    max-width: 90%;
+    border-top: 2px dashed white;
+  }
+
+  .right-box{
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .right-box .right-input{
+    max-width: 90%;
+    font-size: 10px;
+  }
+
+  .right-box .right-btn{
+    font-size: 1px;
+    width:100px;
+    height:30px;
+  }
+  
+  .item-box{
+    max-width:100%;
+    font-size: 10px;
+    color: white;
+    position: relative;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+  
+  .item-box .box-name{
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top:40px;
+    left: 130px;
+
+  }
+  
+  .item-box .box-num{
+    font-size: 15px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    bottom: 10px;
+    left: 130px;
+  }
 }
