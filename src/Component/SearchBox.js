@@ -2,6 +2,7 @@ import React from 'react'
 import { Row,Col,Form,Button } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+import { phone } from '../redux/reducer/reducer'
 
 
 const SearchBox = () => {
@@ -10,7 +11,7 @@ const SearchBox = () => {
 
  const searchByName=(event)=>{
   event.preventDefault();
-  dispatch({type: "SEARCH_BY_USERNAME", payload: { keyword }})
+  dispatch(phone.SEARCH_BY_USERNAME(keyword))
  }
 
   return (

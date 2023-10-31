@@ -2,7 +2,7 @@ import React from 'react'
 import {Button,Form} from 'react-bootstrap';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { type } from '@testing-library/user-event/dist/type';
+import { phone } from '../redux/reducer/reducer';
 
 const ContactForm = () => {
   let [name,setName]=useState('')
@@ -12,7 +12,8 @@ const ContactForm = () => {
 
   const addContact=(event)=>{
     event.preventDefault()
-    dispatch({type:'ADD_CONTACT', payload:{name,phonenum}})
+    //Form형태의 경우 새로고침되어 실행되는데 이를 방지하고자 preventDefault()를 사용한다
+    dispatch(phone.ADD_CONTACT(name,phonenum))
   }
 
 

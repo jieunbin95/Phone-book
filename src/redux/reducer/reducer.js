@@ -1,21 +1,23 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 let initialState = {
   contactList: [],
   keyword: "",
 };
 
-const reducer = (state = initialState, action) => {
-  let { type, payload } = action;
+const book=createSlice({
+  name:'phone-book',
+  initialState,
+  reducers:{
+    ADD_CONTACT(state,action){
+      state.contactList=action.payload
+    },
 
-  switch (type) {
-    case "ADD_CONTACT":
-      state.contactList.push({name:payload.name,
-        phonenum:payload.phonenum,}); 
-        break;
-    case "SEARCH_BY_USERNAME":
-      state.keyword=payload.keyword
-      break;   
-      
-  }return { ...state };
-};
+    SEARCH_BY_USERNAME(state,action){
+      state.keyword=action.payload
+    }
+  }
+})
 
-export default reducer;
+export const phone=book.actions
+export default book.reducer;
